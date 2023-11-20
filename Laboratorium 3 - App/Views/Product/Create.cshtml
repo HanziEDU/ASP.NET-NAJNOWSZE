@@ -1,0 +1,39 @@
+﻿@using Labolatorium3___app.Models;
+@model Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Dodaj nowy Produkt</h1>
+<form asp-controller="Product" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Name">Nazwa Produktu</label>
+        <input class="form-control" asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price">Cena Produktu</label>
+        <input class="form-control" asp-for="Price" />
+        <span class="text-danger" asp-validation-for="Price"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Producer">Producent</label>
+        <input class="form-control" asp-for="Producer" />
+        <span class="text-danger" asp-validation-for="Producer"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DateOfProduction">Data Produkcji</label>
+        <input class="form-control" asp-for="DateOfProduction" />
+        <span class="text-danger" asp-validation-for="DateOfProduction"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="description">Opis</label>
+        <input class="form-control" asp-for="description" />
+        <span class="text-danger" asp-validation-for="description"></span>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit"> Utwórz</button>
+    </div>
+</form>

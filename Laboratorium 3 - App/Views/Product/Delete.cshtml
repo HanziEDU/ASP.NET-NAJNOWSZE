@@ -1,0 +1,17 @@
+﻿@using Labolatorium3___app.Models
+@model Product
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Czy na pewno chcesz usunąć poniższy produkt</h1>
+<p>Nazwa Produktu</p>
+<h4>@Model.Name</h4>
+<p>Producent</p>
+<h4>@Model.Producer</h4>
+<form asp-action="Delete">
+    <input asp-for="Id" />
+    <button class="btn btn-danger" type="submit">Tak</button>
+</form>
